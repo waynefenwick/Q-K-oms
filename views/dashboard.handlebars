@@ -1,0 +1,32 @@
+<div class="container">
+  <section class="left-section">
+    <h2 class="titlebtmBdr">Create New Convo</h2>
+
+    <form class="new-post-form">
+      <div>
+        <b><label for="post-title" class="dashBlabel">Book Title</label></b>
+        <input type="text" id="post-title" name="post-title" class="input"/>
+      </div>
+      <div>
+        <b><label for="post-content" class="dashBlabel">My Thoughts</label></b>
+        <input id="post-content" name="post-content" class="input"/>
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </section>
+
+  {{#if posts.length}}
+  <section class="right-section">
+    <h2>My Convos</h2>
+    <ol>
+      {{#each posts as |post|}}
+      <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Convo</a>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+  {{/if}}
+</div>
+<script src="/javascript/add-post.js"></script>

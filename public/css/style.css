@@ -1,0 +1,403 @@
+:root {
+  --background: rgb(228, 223, 236);
+  --navbarBackground: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
+  --text: rgb(22, 0, 38);
+  --border: 1px solid #470b0b;
+  --button: #141846;
+  --buttonHover: #3071a9;
+  --outlineBorder: 2px solid #280606;
+  --borderBottom: 2px solid #ccc;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text);
+  margin: 0%;
+  background-image: url("/media/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  flex: 1;
+  padding: 2% 2%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  background: var(--navbarBackground);
+  width: 100%;
+  border-bottom: var(--border);
+  margin: 0;
+}
+
+.navbar .title {
+  font-size: 300%;
+  margin: 10px;
+}
+
+.intro{
+  text-align: center;
+}
+
+ul {
+  margin-left: 0;
+  padding: 0;
+}
+
+ul li {
+  line-height: 3;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.left-column {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  border-right: var(--border);
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.left-column-login {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  border-right: var(--border);
+  flex-basis: 30%;
+  max-width: 50%;
+  margin-left: 30px;
+}
+
+.right-column {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 2;
+  text-align: center;
+  flex-basis: 50%;
+}
+
+.right-column-signup {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  flex-basis: 30%;
+  max-width: 50%;
+  margin-left: 50px;
+}
+
+.instruction {
+  margin: 0;
+}
+
+.dashBlabel {
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 250px;
+  padding: 8px;
+  border: var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  flex-basis: 30%;
+  max-width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #2c00dc; /* Dark color that goes well with a white background */
+  font-weight: bold;
+  transition: color 0.1s;
+  margin-right: 20px; /* Add space between anchor tags*/
+}
+
+.titlebtmBdr {
+  border-bottom: var(--borderBottom);
+  margin-right: 20px;
+}
+
+a:hover {
+  color: #9f34eb;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--button);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: var(--buttonHover);
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border: 2px solid #9f34eb;;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+  border-bottom: 10px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  font-size: 1em;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color .1s;
+  margin-left: 5px;
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: #9f34eb;;
+}
+
+.delete-post-btn {
+  background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff643d;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+  color: black;
+}
+
+.edit-link {
+  display: block;
+  margin: 3% 0 2% 0;
+}
+
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+  .form-container {
+    display: flex;
+  }
+  
+  .form-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .form-column form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-column form div {
+    margin-bottom: 10px;
+  }
+  
+  .left-section {
+    flex-basis: 48%;
+  }
+
+  .right-section {
+    flex-basis: 48%;
+    background: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+    border: var(--outlineBorder);
+
+  }
+  .question {
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .instruction {
+    font-size: 12px;
+  }
+
+  #searchResults {
+    align-items: center;
+  }
+
+  .book-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display 2 columns */
+    grid-gap: 20px; /* Add gap between book cards */
+    justify-items: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+  }
+  
+  .book-list li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px; /* Add margin to create the gap between book cards */
+    border: var(--outlineBorder);
+  }
+
+  .book-list li .book-cover {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .book-list li .book-cover img {
+    max-width: 20px;
+    max-height: 80px;
+  }
+  
+  /* Styles for mobile devices */
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .book-list li {
+    width: 100%; /* Adjust the width to your preference */
+  }
+}
+
+/* Styles for tablet devices */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-column {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .right-column {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Styles for desktop devices */
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-column {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
+
+  .right-column {
+    flex-basis: 70%;
+    max-width: 70%;
+  }
+}

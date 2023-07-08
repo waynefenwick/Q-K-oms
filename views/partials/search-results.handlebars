@@ -1,0 +1,23 @@
+{{#if books}}
+  <ul>
+    {{#each books}}
+      <li>
+        <h3>{{this.title}}</h3>
+        {{#if this.authors}}
+          <p><strong>Authors:</strong> {{this.authors}}</p>
+        {{/if}}
+        {{#if this.description}}
+          <p><strong>Description:</strong> {{this.description}}</p>
+        {{/if}}
+        {{#if this.image}}
+          <img src="{{this.image}}" alt="Book Cover">
+        {{/if}}
+        {{#if this.link}}
+          <a href="{{this.link}}" target="_blank">More Info</a>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No results found.</p>
+{{/if}}

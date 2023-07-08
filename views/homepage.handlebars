@@ -1,0 +1,39 @@
+<body>
+<div class="container">
+  {{#if loggedIn}} 
+      <form id="searchForm" action="/search" method="GET">
+      <label for="searchQuery">Search for a Book:</label>
+      <input type="text" id="searchQuery" name="searchQuery" class="input">
+      <button type="submit">Search</button>
+    </form>
+     <div id="searchResults"></div>
+  {{else}}
+  <div class="column left-column">
+    <div  class="intro">
+      <p class="question"><b>You love to read?</b></p>
+      <h3><i>Come join the crowd!</i></h3>
+      <p>-----------------------</p></div>
+    <ul>
+      <li>Find books you would love to read</li>
+      <li>Have great book convos</li>
+      <li>See what others think about books</li>
+      <li>Discuss what authors are saying</li>
+    </ul>
+  </div>
+  {{/if}}
+  <div class="column right-column">
+    <p class="question"><b>Current Convos</b></p>
+    {{#unless loggedIn}}
+    <h6 class="instruction">(Login to participate in a convo)</h6>
+    {{/unless}}
+    <ol class="post-list">
+      {{#each posts as |post|}}
+        <li>
+          {{> post-info post}}
+        </li>
+      {{/each}}
+    </ol>
+  </div>
+</div>
+  <script src="/javascript/search.js"></script>
+<body>
