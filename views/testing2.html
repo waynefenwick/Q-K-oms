@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testing Strava API</title>
+</head>
+<body>
+  <h1>Testing Strava API</h1>
+  <button onclick="getSegmentEffort()">Get Segment Effort</button>
+
+  <div id="segmentEffortData"></div>
+
+  <script>
+    function getSegmentEffort() {
+      const accessToken = 'fc8777ef1c8ff116c3a515d4d440360a1159808f';
+      const segmentEffortId = 'YOURSEGMENTEFFORTID';
+      const apiUrl = `https://www.strava.com/api/v3/segment_efforts/${segmentEffortId}`;
+
+      fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          displaySegmentEffortData(data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
+    function displaySegmentEffortData(data) {
+      const segmentEffortDataElement = document.getElementById('segmentEffortData');
+
+      segmentEffortDataElement.innerHTML = '';
+
+      // Create HTML elements to display the segment effort data
+      const nameElement = document.createElement('h2');
+      nameElement.textContent = `Segment Effort Name: ${data.name}`;
+
+      const distanceElement = document.createElement('p');
+      distanceElement.textContent = `Distance: ${data.distance}`;
+
+      // Append the elements to the segmentEffortDataElement
+      segmentEffortDataElement.appendChild(nameElement);
+      segmentEffortDataElement.appendChild(distanceElement);
+    }
+  </script>
+</body>
+</html>

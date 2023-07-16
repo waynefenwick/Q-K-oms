@@ -7,12 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listener for form submission
   searchForm.addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent form submission
-
     const searchTerm = searchInput.value; // Get the search term
-
     // Clear previous search results
     searchResults.innerHTML = '';
-
     // Perform API request
     fetch(`https://openlibrary.org/search.json?q=${searchTerm}`)
       .then(response => response.json())
@@ -33,13 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         book.type === 'work' // Is a book (work)
       );
     });
-
     if (books.length === 0) {
       searchResults.innerHTML = '<p>No results found.</p>';
     } else {
       const bookList = document.createElement('ul');
       bookList.classList.add('book-list'); // Add CSS class to the book list
-
       books.forEach(book => {
         const listItem = document.createElement('li');
         const bookTitle = document.createElement('span');
@@ -48,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const bookISBN = document.createElement('span'); // Create a new element for the ISBN
 
         bookTitle.textContent = book.title;
-
         if (book.author_name && book.author_name.length > 0) {
           bookAuthor.textContent = 'Author: ' + book.author_name[0];
         } else {
@@ -68,14 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         listItem.style.height = '500px';
         listItem.style.width = '300px';
-
         listItem.appendChild(bookCover);
         listItem.appendChild(bookTitle);
         listItem.appendChild(bookAuthor);
         listItem.appendChild(bookISBN); // Append the ISBN element
         bookList.appendChild(listItem);
       });
-
+      
       searchResults.appendChild(bookList);
     }
   }

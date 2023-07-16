@@ -1,39 +1,74 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>QKM</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
 <body>
-<div class="container">
-  {{#if loggedIn}} 
-      <form id="searchForm" action="/search" method="GET">
-      <label for="searchQuery">Search for a Book:</label>
-      <input type="text" id="searchQuery" name="searchQuery" class="input">
-      <button type="submit">Search</button>
-    </form>
-     <div id="searchResults"></div>
-  {{else}}
-  <div class="column left-column">
-    <div  class="intro">
-      <p class="question"><b>You love to read?</b></p>
-      <h3><i>Come join the crowd!</i></h3>
-      <p>-----------------------</p></div>
-    <ul>
-      <li>Find books you would love to read</li>
-      <li>Have great book convos</li>
-      <li>See what others think about books</li>
-      <li>Discuss what authors are saying</li>
-    </ul>
+  <div class="container">
+    <div class="left-column">
+      <div class="boxTop">
+        <ul>
+          <li>You’re competitive</li>
+          <li>You’re committed</li>
+          <li>You’re confident</li>
+        </ul>
+      </div>
+      <div class="boxMid">
+        <ul>
+          <li>You wunna’ share</li>
+          <li>You wunna’ learn</li>
+          <li>You wunna’ ride…fast!</li>
+        </ul>
+      </div>
+      <div class="boxBot">
+        <ul>
+          <li>Get involved!</li>
+          <li>Get better!</li>
+          <li>Get <b>Q/KOMs!</b></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="right-column">
+      <div class="login-container">
+        <h2>Login</h2>
+        <div class="login-options">
+          <button class="googleBtn" id="googleSignInButton"><i class="fab fa-google"></i> Continue with Google</button>
+          <button class="facebookBtn"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+          <button class="appleBtn"><i class="fab fa-apple"></i> Continue with Apple</button>
+        </div>
+        <hr class="horizontal-line">
+        <h5>Sign-In or Sign-up & Get your Q/KOMs posted!</h5>
+        <br>
+        <div class="signup-option">
+          <form class="signup-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+              <div class="remember-password">
+                <input type="checkbox" id="remPsword" name="remember-password">
+                <label for="remPsword">Remember Password</label>
+              </div>
+              <div class="button-container">
+                <button type="submit" class="signinBtn">Sign In</button>
+                  <hr class="horizontal-line">
+                <button type="submit" class="signupBtn">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  {{/if}}
-  <div class="column right-column">
-    <p class="question"><b>Current Convos</b></p>
-    {{#unless loggedIn}}
-    <h6 class="instruction">(Login to participate in a convo)</h6>
-    {{/unless}}
-    <ol class="post-list">
-      {{#each posts as |post|}}
-        <li>
-          {{> post-info post}}
-        </li>
-      {{/each}}
-    </ol>
-  </div>
-</div>
-  <script src="/javascript/search.js"></script>
-<body>
+</body>
+
+<script src="/javascript/login.js"></script>
+<script src="/javascript/password.js"></script>
+
+
+
+

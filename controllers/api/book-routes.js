@@ -16,9 +16,5 @@ router.get('/search', async (req, res) => {
   }
 });
 
-module.exports = router;
-
-
-
 // Export the router
 module.exports = router;

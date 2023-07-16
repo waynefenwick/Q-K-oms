@@ -1,5 +1,5 @@
 {
-  "name": "project-2-book-share",
+  "name": "q-k-oms",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/module-14-project-mvc.git"
+    "url": "git+https://github.com/https://github.com/waynefenwick/Q-K-oms.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coding-boot-camp/module-14-project-mvc/issues"
-  },
-  "homepage": "https://github.com/coding-boot-camp/module-14-project-mvc#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.7",

@@ -1,32 +1,57 @@
-<div class="container">
-  <section class="left-section">
-    <h2 class="titlebtmBdr">Create New Convo</h2>
 
-    <form class="new-post-form">
-      <div>
-        <b><label for="post-title" class="dashBlabel">Book Title</label></b>
-        <input type="text" id="post-title" name="post-title" class="input"/>
-      </div>
-      <div>
-        <b><label for="post-content" class="dashBlabel">My Thoughts</label></b>
-        <input id="post-content" name="post-content" class="input"/>
-      </div>
-      <button type="submit" class="btn">Create</button>
-    </form>
-  </section>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>QKM</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
 
-  {{#if posts.length}}
-  <section class="right-section">
-    <h2>My Convos</h2>
-    <ol>
-      {{#each posts as |post|}}
-      <li>
-        {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Convo</a>
-      </li>
-      {{/each}}
-    </ol>
-  </section>
-  {{/if}}
-</div>
-<script src="/javascript/add-post.js"></script>
+<body>
+  <div class="dashLeft">
+    <nav class="navLeft">
+      <button class="refreshLatest">Latest Live</button>
+    </nav>
+    <div id="stravaLatest">
+      <p>Strava graphic</p>
+    </div>
+  </div>
+
+  <div class="dashRight">
+    <nav class="navRight">
+      <div class="dropdown">
+        <button class="dropBtn">Segment Convos</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="createNewSegmentConvo()">New Segment Convo</a>
+          <a href="#" onclick="viewSegmentConvo('Segment Convo Title 1')">Segment Convo Title 1</a>
+          <a href="#" onclick="viewSegmentConvo('Segment Convo Title 2')">Segment Convo Title 2</a>
+          <!-- Add more segment convo titles as needed -->
+        </div>
+      </div>
+      <div class="tips">
+      <button class="tipBtn" onclick="toggleModal()">Q/KOM Tips</button>
+      </div>
+    </nav>  
+
+    <div id="tipModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleModal()">&times;</span>
+        <h3>Tips for Achieving Q/KOMs:</h3>
+        <ul>
+          <li>TIP 1: Lorem ipsum dolor sit amet.</li>
+          <li>TIP 2: Consectetur adipiscing elit.</li>
+          <li>TIP 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <!-- Add more tips as needed -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function toggleModal() {
+      const modal = document.getElementById('tipModal');
+      modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+
+

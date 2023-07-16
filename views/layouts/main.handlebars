@@ -4,36 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookShare</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Q/KOMs</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
-        <header>
-            <div class="navbar">
-            <i><h1 class="title">BookShare</h1></i>
-            <div class="navLinks">
-            <div class="wrapper"></div>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/">Home</a>
-                <a href="/dashboard">Dashboard</a>
-                <button id="logout" class="btn-no-style">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav>
-        </header>
-        <main>
-                {{{ body }}} </main>
-                <footer>
-                    © Team-3 2023
-                </footer>
-    </div>
+    <header class="header">
+        <div class="logo">
+            <img src="/media/WebLogo.png" alt="Logo" width="100">
+        </div>
+        <div class="title">
+            <h1 class="convos">Convos for Q/KOM</h1>
+            <i><h1 class="hunters">Hunters!</h1></i>
+        </div>
+            {{#if loggedIn}}
+            <button id="logoutBtn" class="signoutBtn">Signout</button>
+            {{/if}}
+    </header>
+
+    <main class="bodyMain">
+        {{{ body }}}
+    </main>
+
+    <footer>© QKM 2023</footer>
 
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
+
 </body>
 
 </html>

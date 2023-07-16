@@ -1,0 +1,427 @@
+:root {
+    --colorRed: rgb(182, 0, 0);
+    --colorYellow: rgb(255, 213, 0);
+    --colorGreen: rgb(96, 174, 63);
+    --colorLtGreen: rgb(240, 254, 234);
+    --colorBorder: rgb(182, 0, 0);
+    --shadowBorder: 3px 3px 3px;
+}
+
+/* Body */
+.bodyMain {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("../media/homeBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+h1,
+h5 {
+    margin: 0;
+}
+
+.logo {
+    flex-basis: 33.33%;
+    text-align: left;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+    margin-left: 75px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--colorGreen);
+    border-bottom: 2px solid var(--colorRed);
+    color: white;
+}
+
+.title {
+    flex-basis: 66.66%;
+    text-align: right;
+}
+
+.convos {
+    margin-right: 250px;
+    font-size: 50px;
+}
+
+.hunters {
+    margin-right: 500px;
+    font-size: 40px;
+}
+
+.container {
+    display: flex;
+    margin: 0px;
+    padding-bottom: 30px;
+}
+
+/* Left Column */
+.left-column {
+    flex-basis: 50%;
+    margin-top: 0px;
+}
+
+.boxTop,
+.boxMid,
+.boxBot {
+    margin: 60px 50px 30px 150px;
+    background-color: var(--colorLtGreen);
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 2;
+    border: 2px solid var(--colorBorder);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.506);
+    width: 300px;
+}
+
+ul {
+    margin: 0;
+}
+
+/* Right Column */
+.right-column {
+    flex-basis: 50%;
+    margin-top: 2%;
+    border-left: 3px solid rgb(182, 0, 0)
+}
+
+.login-container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 5px 30px 5px 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.googleBtn {
+    color: #db4437;
+    border: 1px solid #db4437;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.googleBtn:hover {
+    background-color: rgb(255, 77, 77);
+    color: #ffffff;
+}
+
+.facebookBtn {
+    color: #1877f2;
+    border: 1px solid #1877f2;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.facebookBtn:hover {
+    background-color: rgb(80, 94, 248);
+    color: #ffffff;
+}
+
+.appleBtn {
+    color: #000;
+    border: 1px solid #000;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appleBtn:hover {
+    background-color: rgb(79, 79, 79);
+    color: #ffffff;
+}
+
+.loginWith {
+    background-color: var(--colorLtGreen);
+    border-radius: 5px;
+    padding: 50px;
+    margin: 75px 100px 10px 100px;
+    border: 2px solid var(--colorBorder);
+    box-shadow: 2px 2px 4px;
+}
+
+.horizontal-line {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Sign-Up & Sign-In */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+}
+
+.signup-option {
+    margin: 0px 10px 20px 10px;
+}
+
+.signup-option h3 {
+    margin-bottom: 10px;
+}
+
+.signup-option label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup-option input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+}
+
+.signupBtn,
+.signinBtn,
+.authorize,
+.getSegment {
+    flex: 1;
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: var(--colorGreen);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid #3e1100f2;
+    border-left-width: 5px;
+}
+
+.signoutBtn {
+    flex: 1;
+    padding: 5px 20px;
+    font-size: 16px;
+    background-color: var(--colorYellow);
+    color: #030000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid #3e1100f2;
+    border-left-width: 5px;
+}
+
+.signupBtn:hover,
+.signinBtn:hover,
+.signoutBtn:hover,
+.authorize:hover,
+.getSegment:hover {
+    background-color: rgb(17, 100, 8);
+    color: #fff;
+}
+
+.remember-password {
+    display: flex;
+    align-items: flex-start;
+}
+
+.remember-password input[type="checkbox"] {
+    margin: 5px;
+    order: -1;
+    align-self: flex-start;
+    width: auto;
+}
+
+#remPsword {
+    align-self: auto;
+}
+
+.remember-password label {
+    margin: 5px;
+    font-size: 13px;
+}
+
+/* Dashboard */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logoutBtn {
+    align-self: flex-end;
+    width: 100%;
+}
+
+/* Dashboard Left */
+.dashLeft,
+.dashRight {
+    float: left;
+    width: 50%;
+    height: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+#stravaLatest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 100px;
+}
+
+.navLeft,
+.navRight {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3e110051;
+}
+
+.getSegment,
+.refreshLatest,
+.dropBtn,
+.tipBtn {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #3e1100f2;
+    border-left-width: 5px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* Dashboard Right */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Dashboard Right Tip Pop-Up */
+.tips {
+    position: relative;
+    display: inline-block;
+  }
+
+  .modal {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 22.5%;
+    width: 50%;
+    height: 70%;
+    overflow: auto;
+    margin: 15px 0px 0px 0px;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid var(--colorBorder);
+    width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}

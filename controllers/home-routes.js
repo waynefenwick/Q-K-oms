@@ -31,7 +31,7 @@ router.get("/", (req, res) => {
     });
 });
 
-
+//GET route that will be used to render by id
 router.get("/post/:id", (req, res) => {
   Post.findOne({
     where: {
@@ -57,10 +57,7 @@ router.get("/post/:id", (req, res) => {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
-     
       const post = dbPostData.get({ plain: true });
-
-     
       res.render("single-post", { post, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
@@ -68,6 +65,7 @@ router.get("/post/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 //GET route that will be used to render the login-view of the application. 
 router.get("/login", (req, res) => {
     if (req.session.loggedIn) {
